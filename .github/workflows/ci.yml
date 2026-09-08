@@ -36,7 +36,9 @@ jobs:
           cache: pip
           cache-dependency-path: pyproject.toml
       - name: Install project and test dependencies
-        run: python -m pip install -e '.[dev]'
+        run: |
+          python -m pip install 'pip>=26.2.1,<27'
+          python -m pip install -e '.[dev]'
       - name: Check dependency compatibility
         run: python -m pip check
       - name: Run core tests

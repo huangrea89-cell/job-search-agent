@@ -112,7 +112,7 @@ SQLite 保存岗位、评分、来源和简历方案；Excel 是导出快照。�
 核心服务、导入与测试不需要招聘账号、真实简历或模型 API Key。推荐在 macOS 使用，钥匙串功能仅适用于 macOS。
 
 1. 安装 Python 3.13，并在克隆后的仓库根目录创建虚拟环境：`python3.13 -m venv .venv`。
-2. 安装开发依赖：`.venv/bin/pip install -e '.[dev]'`。
+2. 升级安装工具：`.venv/bin/python -m pip install 'pip>=26.2.1,<27'`，再安装开发依赖：`.venv/bin/pip install -e '.[dev]'`。
 3. 复制 `config/settings.example.yaml` 为 `config/settings.yaml`，按需调整非敏感设置。
 4. 初始化数据库：`.venv/bin/job-agent init`。使用模型相关功能时再配置钥匙串，密钥不属于基础运行前提。
 5. 启动：`.venv/bin/job-agent serve`，然后访问 `http://127.0.0.1:8765/control`；健康检查位于 `/health`。
@@ -155,6 +155,6 @@ Excel 导出依赖 `@oai/artifact-tool` 运行时，目前尚未打包为普通�
 - [核心服务](app/)：数据处理、API 与简历生成。
 - [测试](tests/)：导入去重、来源限制、评分、毕业年份风险、接口、工作台快照和简历确认门。
 - [自动测试](docs/ci.md)：GitHub Actions 在 Ubuntu/macOS 上运行测试、严格评测与离线演示；首次远端运行尚待上传后验证。
-- [发布前检查](docs/release-readiness.md)：已发现历史隐私信息与依赖告警，处理完成前不直接公开完整历史。
+- [发布前检查](docs/release-readiness.md)：脱敏发布分支与依赖升级验证记录；不公开私人开发历史。
 
 已完成离线虚构案例、Excel 工作台展示、评分挑战集、首轮误判修复与 GitHub Actions 配置。下一项是公开发布前的隐私与依赖检查。独立人工标注与泛化评测仍待完善。CI 是否通过以首次 GitHub 实际运行为准。

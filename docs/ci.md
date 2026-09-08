@@ -2,7 +2,7 @@
 
 工作流：[ci.yml](../.github/workflows/ci.yml)。推送、PR 和手动触发时，在 Ubuntu 与 macOS 的 Python 3.13 环境执行：
 
-1. 从 `pyproject.toml` 安装项目及开发依赖，运行 `pip check`。
+1. 将 pip 升至 `>=26.2.1,<27`，从 `pyproject.toml` 安装项目及开发依赖，运行 `pip check`。
 2. 执行 Python 测试，输出 JUnit 报告。
 3. 严格执行评分挑战集：存在未满足预期时返回失败。
 4. 运行虚构离线演示，验证命令行入口及生成流程。
