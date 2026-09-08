@@ -1,0 +1,19 @@
+{
+  "mode": "link_import",
+  "job": {
+    "source": "boss",
+    "source_url": "https://example.invalid/job/replace-me",
+    "company": "请替换为真实公司",
+    "title": "请替换为真实岗位",
+    "description": "请粘贴真实岗位描述",
+    "locations": ["上海"],
+    "employment_type": "full_time"
+  },
+  "evidence": {
+    "education": [],
+    "skills": [],
+    "experience_evidence": [],
+    "transferable_evidence": [],
+    "full_time_years": 0
+  }
+}

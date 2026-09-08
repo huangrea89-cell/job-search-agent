@@ -1,0 +1,16 @@
+{
+  "candidate": {
+    "name": "演示候选人（完全虚构）",
+    "fact": "在课程项目中完成用户研究，使用 SQL 分析需求反馈并撰写产品建议。",
+    "evidence": {"education": ["统计学"], "skills": ["用户研究", "SQL", "需求分析"], "experience_evidence": [], "transferable_evidence": ["沟通协调"], "full_time_years": 0}
+  },
+  "labels": ["A / Strong fit", "B / 2027 eligibility warning", "C / Missing evidence", "D / Non-target city", "E / Experience requirement"],
+  "jobs": [
+    {"source": "official", "source_url": "https://example.invalid/jobs/a", "official_url": "https://example.invalid/jobs/a", "company": "演示甲公司（虚构）", "title": "AI产品经理", "description": "应届生，统计学相关专业，负责用户研究、SQL、需求分析和沟通协调。", "locations": ["上海"], "employment_type": "full_time", "employer_kind": "large"},
+    {"source": "official", "source_url": "https://example.invalid/jobs/b", "official_url": "https://example.invalid/jobs/b", "company": "演示乙公司（虚构）", "title": "AI产品经理", "description": "面向2027届毕业生，统计学相关专业，负责用户研究、SQL、需求分析和沟通协调。", "locations": ["杭州"], "employment_type": "full_time", "employer_kind": "large"},
+    {"source": "official", "source_url": "https://example.invalid/jobs/c", "company": "演示丙公司（虚构）", "title": "AI产品运营", "description": "应届生，负责内容运营。", "locations": ["苏州"], "employment_type": "full_time"},
+    {"source": "official", "source_url": "https://example.invalid/jobs/d", "company": "演示丁公司（虚构）", "title": "AI产品经理", "description": "应届生，统计学相关专业，负责用户研究、SQL、需求分析和沟通协调。", "locations": ["北京"], "employment_type": "full_time", "employer_kind": "large"},
+    {"source": "official", "source_url": "https://example.invalid/jobs/e", "company": "演示戊公司（虚构）", "title": "AI产品经理", "description": "要求3年工作经验，统计学相关专业，负责用户研究、SQL、需求分析和沟通协调。", "locations": ["上海"], "employment_type": "full_time", "employer_kind": "large"}
+  ],
+  "proposal": {"location": "课程项目", "before": "在课程项目中完成用户研究，使用 SQL 分析需求反馈并撰写产品建议。", "after": "课程项目：通过用户研究收集需求反馈，使用 SQL 分析并形成产品建议。", "job_requirement": "用户研究与SQL需求分析", "evidence_refs": ["demo-fact-1"], "reason": "将已知事实按研究、分析、建议的顺序呈现，不增加项目成果。"}
+}

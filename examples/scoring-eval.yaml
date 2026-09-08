@@ -1,0 +1,78 @@
+version: 1
+label_status: assistant_authored_pending_owner_review
+candidate:
+  education: [统计学]
+  skills: [SQL, 用户研究]
+  full_time_years: 0
+base_job:
+  source: manual
+  source_url: https://example.invalid/evaluation
+  company: 评测企业（虚构）
+  title: AI产品经理
+  description: 应届生可投，负责用户研究与SQL分析。
+  locations: [上海]
+  employment_type: full_time
+  employer_kind: large
+cases:
+  - id: E01
+    category: 常规边界
+    intent: 上海应届AI产品岗位保留
+    job: {}
+    expected: {filtered: false}
+  - id: E02
+    category: 常规边界
+    intent: 苏州AI商业分析方向保留
+    job: {title: AI商业分析, locations: [苏州]}
+    expected: {filtered: false}
+  - id: E03
+    category: 常规边界
+    intent: 杭州2027届仅提示不排除
+    job: {locations: [杭州], description: '面向2027届毕业生，负责用户研究。'}
+    expected: {filtered: false, needs_contains: '2027'}
+  - id: E04
+    category: 常规边界
+    intent: 北京岗位按城市排除
+    job: {locations: [北京]}
+    expected: {filtered: true, reasons_contains: 工作地点}
+  - id: E05
+    category: 常规边界
+    intent: 多城市包含杭州时保留
+    job: {locations: [北京, 杭州]}
+    expected: {filtered: false}
+  - id: E06
+    category: 常规边界
+    intent: 实习岗位按全职偏好排除
+    job: {employment_type: internship}
+    expected: {filtered: true, reasons_contains: 非全职}
+  - id: E07
+    category: 常规边界
+    intent: 缺地点时提示而非直接排除
+    job: {locations: []}
+    expected: {filtered: false, needs_contains: 工作地点}
+  - id: E08
+    category: 常规边界
+    intent: 无证据不得获得履历分
+    candidate: {education: [], skills: [], full_time_years: 0}
+    job: {}
+    expected: {resume_score_max: 0}
+  - id: E09
+    category: 语言挑战
+    intent: 英文三年经验硬要求也应排除零年候选人
+    job: {description: 'Minimum 3 years of full-time experience required. SQL and user research.'}
+    expected: {filtered: true, reasons_contains: 正式工作年限}
+  - id: E10
+    category: 语言挑战
+    intent: 不要求博士不应被当作要求博士
+    job: {description: '应届可投，不要求博士学历及以上，负责用户研究。'}
+    expected: {filtered: false}
+  - id: E11
+    category: 语言挑战
+    intent: 明确不需要SQL时不应获得SQL证据分
+    candidate: {skills: [SQL], full_time_years: 0}
+    job: {description: '应届可投，不需要SQL技能，负责产品协调。'}
+    expected: {resume_score_max: 0}
+  - id: E12
+    category: 语言挑战
+    intent: 英文AI产品岗位应识别目标方向
+    job: {title: AI Product Manager, description: 'Graduate role. User research and SQL.'}
+    expected: {expectation_score_min: 50}

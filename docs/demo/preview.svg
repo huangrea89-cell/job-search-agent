@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560">
+<rect width="1100" height="560" fill="#f4f7fb"/>
+<g font-family="Arial, sans-serif" fill="#16324f">
+<text x="40" y="55" font-size="28" font-weight="bold">Job Agent / Offline demo</text>
+<text x="40" y="88" font-size="16">Synthetic data · real scoring pipeline · no API key required</text>
+<text x="40" y="126" font-size="16">6 imports / 5 jobs / duplicate merged / proposal awaits approval</text>
+<rect x="40" y="154" width="1020" height="54" rx="8" fill="#e0f2fe"/>
+<text x="58" y="187" font-size="18">A / Strong fit</text>
+<text x="655" y="187" font-size="17">50 + 50 = 100 / 5 stars / retained</text>
+<rect x="40" y="219" width="1020" height="54" rx="8" fill="#e0f2fe"/>
+<text x="58" y="252" font-size="18">B / 2027 eligibility warning</text>
+<text x="655" y="252" font-size="17">50 + 50 = 100 / 5 stars / retained</text>
+<rect x="40" y="284" width="1020" height="54" rx="8" fill="#e0f2fe"/>
+<text x="58" y="317" font-size="18">C / Missing evidence</text>
+<text x="655" y="317" font-size="17">45 + 0 = 45 / 2 stars / retained</text>
+<rect x="40" y="349" width="1020" height="54" rx="8" fill="#fee2e2"/>
+<text x="58" y="382" font-size="18">D / Non-target city</text>
+<text x="655" y="382" font-size="17">40 + 50 = 90 / 1 stars / filtered</text>
+<rect x="40" y="414" width="1020" height="54" rx="8" fill="#fee2e2"/>
+<text x="58" y="447" font-size="18">E / Experience requirement</text>
+<text x="655" y="447" font-size="17">50 + 50 = 100 / 1 stars / filtered</text>
+<text x="40" y="525" font-size="15">Generated result preview, not an Excel screenshot. Stars are not hiring probabilities.</text>
+</g></svg>

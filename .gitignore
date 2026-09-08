@@ -1,0 +1,40 @@
+# macOS
+.DS_Store
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Private candidate data
+private/
+profile/
+
+# Resumes and generated application materials
+resumes/master/
+resumes/tailored/
+applications/generated/
+
+# Local job data and Excel runtime files
+data/
+*.xlsm
+~$*.xls*
+config/settings.yaml
+
+# Logs and temporary files
+logs/
+tmp/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.coverage
+*.egg-info/
+
+# Node.js
+node_modules/

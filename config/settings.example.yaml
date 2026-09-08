@@ -1,0 +1,14 @@
+server:
+  host: 127.0.0.1
+  port: 8765
+database:
+  path: data/job-agent.sqlite3
+  backup_retention: 30
+models:
+  fast: gpt-5-mini
+  quality: gpt-5
+  keychain_service: 求职Agent.OpenAI
+  max_calls_per_run: 100
+  timeout_seconds: 45
+privacy:
+  redact_logs: true

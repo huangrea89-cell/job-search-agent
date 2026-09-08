@@ -1,0 +1,4 @@
+interface:
+  display_name: "求职助手"
+  short_description: "Tailor job applications using verified candidate facts"
+  default_prompt: "Use $job-search-assistant to analyze this role and tailor my application materials."

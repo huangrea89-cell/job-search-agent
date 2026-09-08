@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "job-search-agent"
+version = "0.1.0"
+description = "Local single-user job search workspace"
+requires-python = ">=3.13"
+dependencies = [
+  "fastapi>=0.116,<1",
+  "uvicorn>=0.35,<1",
+  "pydantic>=2.11,<3",
+  "PyYAML>=6,<7",
+  "httpx>=0.28,<1",
+  "beautifulsoup4>=4.13,<5",
+  "openai>=1.100,<2",
+  "python-docx>=1.2,<2",
+  "pypdf>=5,<6",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.4,<9", "pytest-cov>=6,<7", "pdf2image>=1.17,<2"]
+
+[project.scripts]
+job-agent = "app.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

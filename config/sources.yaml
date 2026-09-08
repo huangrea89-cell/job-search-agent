@@ -1,0 +1,13 @@
+sources:
+  official_sites:
+    enabled: true
+    mode: public_fetch
+    # Add explicitly approved public career-page URLs here. Empty means the
+    # update reports "not configured" and performs no network request.
+    urls: []
+  boss:
+    enabled: true
+    mode: browser_assisted
+  nowcoder:
+    enabled: true
+    mode: browser_assisted

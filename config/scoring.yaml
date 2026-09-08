@@ -1,0 +1,43 @@
+version: 2
+expectation_max: 50
+resume_fit_max: 50
+star_thresholds:
+  5: 85
+  4: 70
+  3: 55
+  2: 40
+hard_filters:
+  target_cities: [上海, 苏州, 杭州]
+  employment_type: full_time
+  reject_phd_required: true
+  reject_phd_preferred: true
+  reject_required_full_time_years_at_least: 1
+  excluded_role_kinds: [sales, pure_project_manager]
+  excluded_company_kinds: [micro, outsourcing, labor_dispatch, agency_unknown_employer]
+tie_breakers: [company_quality, published_salary]
+expectation_weights:
+  target_direction: 30
+  target_city: 10
+  full_time: 5
+  company_preference: 5
+resume_fit_weights:
+  direct_evidence: 35
+  education_relevance: 10
+  transferable_evidence: 5
+target_role_terms:
+  - AI Product Manager
+  - Artificial Intelligence Product Manager
+  - AI产品
+  - 大模型产品
+  - Agent产品
+  - AI运营
+  - AI策略
+  - AI创新
+  - 智能商业分析
+  - AI战略
+  - 战略分析
+  - AI商业分析
+  - 经营分析
+  - AI行业研究
+  - AI产业研究
+  - CEO Office

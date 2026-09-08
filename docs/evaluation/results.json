@@ -1,0 +1,377 @@
+{
+  "label_status": "assistant_authored_pending_owner_review",
+  "rule_version": 1,
+  "fixture_sha256": "1d1be5b8c8f52dd4cc3ebaeb99b500cd17d8cb7b36d4d10a67868a7853037cdf",
+  "rules_sha256": "db4e4bfb1ae205f02afd252fcdf8ef7f21cf05d5d86e9664b8e0fc92969e373e",
+  "scorer_sha256": "645066617b36e122754c2429edf8944176ff1479f9435da9b4f634ca451325aa",
+  "total": 12,
+  "passed": 8,
+  "cases": [
+    {
+      "id": "E01",
+      "category": "常规边界",
+      "intent": "上海应届AI产品岗位保留",
+      "expected": {
+        "filtered": false
+      },
+      "actual": {
+        "filtered": false,
+        "filter_reasons": [],
+        "expectation_score": 50,
+        "resume_score": 30,
+        "total_score": 80,
+        "stars": 4,
+        "confidence": "medium",
+        "needs_confirmation": [],
+        "recommendation": "建议优先评估",
+        "matches": [
+          "SQL",
+          "用户研究"
+        ],
+        "gaps": [],
+        "rule_version": 1
+      },
+      "checks": {
+        "filtered": true
+      },
+      "passed": true
+    },
+    {
+      "id": "E02",
+      "category": "常规边界",
+      "intent": "苏州AI商业分析方向保留",
+      "expected": {
+        "filtered": false
+      },
+      "actual": {
+        "filtered": false,
+        "filter_reasons": [],
+        "expectation_score": 50,
+        "resume_score": 30,
+        "total_score": 80,
+        "stars": 4,
+        "confidence": "medium",
+        "needs_confirmation": [],
+        "recommendation": "建议优先评估",
+        "matches": [
+          "SQL",
+          "用户研究"
+        ],
+        "gaps": [],
+        "rule_version": 1
+      },
+      "checks": {
+        "filtered": true
+      },
+      "passed": true
+    },
+    {
+      "id": "E03",
+      "category": "常规边界",
+      "intent": "杭州2027届仅提示不排除",
+      "expected": {
+        "filtered": false,
+        "needs_contains": "2027"
+      },
+      "actual": {
+        "filtered": false,
+        "filter_reasons": [],
+        "expectation_score": 50,
+        "resume_score": 20,
+        "total_score": 70,
+        "stars": 4,
+        "confidence": "medium",
+        "needs_confirmation": [
+          "校招资格不符合：岗位要求2027届/2027年毕业，候选人2026年6月毕业"
+        ],
+        "recommendation": "建议优先评估",
+        "matches": [
+          "用户研究"
+        ],
+        "gaps": [],
+        "rule_version": 1
+      },
+      "checks": {
+        "filtered": true,
+        "needs_contains": true
+      },
+      "passed": true
+    },
+    {
+      "id": "E04",
+      "category": "常规边界",
+      "intent": "北京岗位按城市排除",
+      "expected": {
+        "filtered": true,
+        "reasons_contains": "工作地点"
+      },
+      "actual": {
+        "filtered": true,
+        "filter_reasons": [
+          "工作地点不在目标城市"
+        ],
+        "expectation_score": 40,
+        "resume_score": 30,
+        "total_score": 70,
+        "stars": 1,
+        "confidence": "medium",
+        "needs_confirmation": [],
+        "recommendation": "不进入主推荐表",
+        "matches": [
+          "SQL",
+          "用户研究"
+        ],
+        "gaps": [],
+        "rule_version": 1
+      },
+      "checks": {
+        "filtered": true,
+        "reasons_contains": true
+      },
+      "passed": true
+    },
+    {
+      "id": "E05",
+      "category": "常规边界",
+      "intent": "多城市包含杭州时保留",
+      "expected": {
+        "filtered": false
+      },
+      "actual": {
+        "filtered": false,
+        "filter_reasons": [],
+        "expectation_score": 50,
+        "resume_score": 30,
+        "total_score": 80,
+        "stars": 4,
+        "confidence": "medium",
+        "needs_confirmation": [],
+        "recommendation": "建议优先评估",
+        "matches": [
+          "SQL",
+          "用户研究"
+        ],
+        "gaps": [],
+        "rule_version": 1
+      },
+      "checks": {
+        "filtered": true
+      },
+      "passed": true
+    },
+    {
+      "id": "E06",
+      "category": "常规边界",
+      "intent": "实习岗位按全职偏好排除",
+      "expected": {
+        "filtered": true,
+        "reasons_contains": "非全职"
+      },
+      "actual": {
+        "filtered": true,
+        "filter_reasons": [
+          "非全职岗位"
+        ],
+        "expectation_score": 45,
+        "resume_score": 30,
+        "total_score": 75,
+        "stars": 1,
+        "confidence": "medium",
+        "needs_confirmation": [],
+        "recommendation": "不进入主推荐表",
+        "matches": [
+          "SQL",
+          "用户研究"
+        ],
+        "gaps": [],
+        "rule_version": 1
+      },
+      "checks": {
+        "filtered": true,
+        "reasons_contains": true
+      },
+      "passed": true
+    },
+    {
+      "id": "E07",
+      "category": "常规边界",
+      "intent": "缺地点时提示而非直接排除",
+      "expected": {
+        "filtered": false,
+        "needs_contains": "工作地点"
+      },
+      "actual": {
+        "filtered": false,
+        "filter_reasons": [],
+        "expectation_score": 40,
+        "resume_score": 30,
+        "total_score": 70,
+        "stars": 4,
+        "confidence": "medium",
+        "needs_confirmation": [
+          "工作地点待确认"
+        ],
+        "recommendation": "建议优先评估",
+        "matches": [
+          "SQL",
+          "用户研究"
+        ],
+        "gaps": [],
+        "rule_version": 1
+      },
+      "checks": {
+        "filtered": true,
+        "needs_contains": true
+      },
+      "passed": true
+    },
+    {
+      "id": "E08",
+      "category": "常规边界",
+      "intent": "无证据不得获得履历分",
+      "expected": {
+        "resume_score_max": 0
+      },
+      "actual": {
+        "filtered": false,
+        "filter_reasons": [],
+        "expectation_score": 50,
+        "resume_score": 0,
+        "total_score": 50,
+        "stars": 2,
+        "confidence": "medium",
+        "needs_confirmation": [],
+        "recommendation": "建议用户判断后决定",
+        "matches": [],
+        "gaps": [
+          "岗位核心要求暂无可追溯候选人证据"
+        ],
+        "rule_version": 1
+      },
+      "checks": {
+        "resume_score_max": true
+      },
+      "passed": true
+    },
+    {
+      "id": "E09",
+      "category": "语言挑战",
+      "intent": "英文三年经验硬要求也应排除零年候选人",
+      "expected": {
+        "filtered": true,
+        "reasons_contains": "正式工作年限"
+      },
+      "actual": {
+        "filtered": false,
+        "filter_reasons": [],
+        "expectation_score": 50,
+        "resume_score": 20,
+        "total_score": 70,
+        "stars": 4,
+        "confidence": "medium",
+        "needs_confirmation": [
+          "工作年限待确认"
+        ],
+        "recommendation": "建议优先评估",
+        "matches": [
+          "SQL"
+        ],
+        "gaps": [],
+        "rule_version": 1
+      },
+      "checks": {
+        "filtered": false,
+        "reasons_contains": false
+      },
+      "passed": false
+    },
+    {
+      "id": "E10",
+      "category": "语言挑战",
+      "intent": "不要求博士不应被当作要求博士",
+      "expected": {
+        "filtered": false
+      },
+      "actual": {
+        "filtered": true,
+        "filter_reasons": [
+          "明确要求博士"
+        ],
+        "expectation_score": 50,
+        "resume_score": 20,
+        "total_score": 70,
+        "stars": 1,
+        "confidence": "medium",
+        "needs_confirmation": [],
+        "recommendation": "不进入主推荐表",
+        "matches": [
+          "用户研究"
+        ],
+        "gaps": [],
+        "rule_version": 1
+      },
+      "checks": {
+        "filtered": false
+      },
+      "passed": false
+    },
+    {
+      "id": "E11",
+      "category": "语言挑战",
+      "intent": "明确不需要SQL时不应获得SQL证据分",
+      "expected": {
+        "resume_score_max": 0
+      },
+      "actual": {
+        "filtered": false,
+        "filter_reasons": [],
+        "expectation_score": 50,
+        "resume_score": 20,
+        "total_score": 70,
+        "stars": 4,
+        "confidence": "medium",
+        "needs_confirmation": [],
+        "recommendation": "建议优先评估",
+        "matches": [
+          "SQL"
+        ],
+        "gaps": [],
+        "rule_version": 1
+      },
+      "checks": {
+        "resume_score_max": false
+      },
+      "passed": false
+    },
+    {
+      "id": "E12",
+      "category": "语言挑战",
+      "intent": "英文AI产品岗位应识别目标方向",
+      "expected": {
+        "expectation_score_min": 50
+      },
+      "actual": {
+        "filtered": false,
+        "filter_reasons": [],
+        "expectation_score": 20,
+        "resume_score": 20,
+        "total_score": 40,
+        "stars": 2,
+        "confidence": "medium",
+        "needs_confirmation": [
+          "工作年限待确认"
+        ],
+        "recommendation": "建议用户判断后决定",
+        "matches": [
+          "SQL"
+        ],
+        "gaps": [],
+        "rule_version": 1
+      },
+      "checks": {
+        "expectation_score_min": false
+      },
+      "passed": false
+    }
+  ]
+}
